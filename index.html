@@ -12,16 +12,37 @@
       border-bottom: 2px darkblue solid;
     }
 
-    .entry { display: block; width: 100%; }
-    .business { display: inline-block; text-decoration: underline; margin: 0 1rem; }
-    .title { display: inline-block; font-weight: bold; }
-    .location { display: inline-block; }
-    .timeline { display: inline-block; position: absolute; right: 1rem; }
-    .entry .entry {
-      margin: 0 1rem;
+    .entry {
+      display: block;
+      width: 100%;
     }
 
+    .business,
+    .title,
+    .location,
+    .timeline {
+      display: inline-block;
+    }
 
+    .business {
+      margin-left: 1rem;
+    }
+
+    .business::after,
+    .location::before {
+      content: "|";
+      opacity: 0.15;
+      padding: 0 1rem;
+    }
+
+    .timeline {
+      position: absolute;
+      right: 1rem;
+    }
+
+    .entry .entry {
+      margin: 1rem 0 0 1rem;
+    }
   </style>
 </head>
 
@@ -36,9 +57,10 @@
   <h2>Employment History</h2>
   <div class="entry">
     <div class="business">Bayer</div>
-    <div class="timeline">2022 &ndash; 2024</div>
     <div class="title">Full&ndash;Stack Software Engineer</div>
-    <div class="details">      
+    <div class="location">Remote</div>
+    <div class="timeline">2022 &ndash; 2024</div>
+    <div class="details">
       <ul>
         <li>Supporting logistics activities within the R&amp;D and Supply Chain functions of Crop Science.</li>
         <li>Greenfield application requirements gathering, design, development, and support</li>
@@ -53,6 +75,7 @@
   <div class="entry">
     <div class="business">Olive AI</div>
     <div class="title">Software Automation Engineer</div>
+    <div class="location">Remote</div>
     <div class="timeline">2020 &ndash; 2022</div>
     <div class="details">
       <ul>
@@ -69,6 +92,7 @@
   <div class="entry">
     <div class="business">JPMorgan Chase &amp; Co.</div>
     <div class="title">Lead Software Developer</div>
+    <div class="location">Columbus, Ohio/Remote</div>
     <div class="timeline">2018 &ndash; 2020</div>
     <div class="details">
       <ul>
@@ -86,6 +110,9 @@
 
   <div class="entry">
     <div class="business">Baker Hughes, a GE Company</div>
+    <div class="title">HR/IT Architect Advisor</div>
+    <div class="location">Houston, Texas</div>
+    <div class="timeline">2008 &ndash; 2017</div>
     <div class="entry">
       <div class="title">HR/IT Architect Advisor</div>
       <div class="timeline">2013 &ndash; 2017</div>
@@ -115,7 +142,8 @@
           <li>Analyzed business requirements and translated them to actionable project requirements</li>
           <li>Lead technical contact for third party developers of the corporate public facing website ensuring clear
             understanding of requirements facilitating an on time launch at quarter the cost of initial estimates</li>
-          <li>SharePoint developer for intranet, eliminating legacy systems and content, with a successful on time and on
+          <li>SharePoint developer for intranet, eliminating legacy systems and content, with a successful on time and
+            on
             budget launch</li>
           <li>Designed, implemented, and automated collaborative activities reducing overhead</li>
         </ul>
