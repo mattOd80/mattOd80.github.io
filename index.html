@@ -6,6 +6,8 @@
   <style>
     body {
       font-family: Geneva, Verdana, sans-serif;
+      max-width: 1080px;
+      margin: 0 auto;
     }
 
     h1 {
@@ -17,11 +19,11 @@
       padding: 0 0 1rem 1rem;
     }
 
-    .business,
-    .title,
-    .location,
+    .entry .business,
+    .entry .title,
+    .entry .location,
     .timeline {
-      display: inline;
+      display: inline !important;
       font-size: 1.35rem;
     }
 
@@ -32,9 +34,8 @@
       padding: 0 0.5rem;
     }
 
-    .timeline {
-      float: right;
-      padding-right: 1rem;
+    .entry .entry .title::before {
+      content: none;
     }
 
     .entry .entry {
@@ -43,8 +44,9 @@
       padding: 1rem 0 0 0;
     }
 
-    .entry .entry .title::before {
-      content: none;
+    .timeline {
+      float: right;
+      padding-right: 1rem;
     }
 
     .entry .entry .business,
@@ -56,7 +58,7 @@
 
     .entry .entry .timeline {
       font-style: italic;
-    } 
+    }
 
     footer {
       margin-top: 2rem;
@@ -67,36 +69,52 @@
 
 <body>
   <h1>Matthew O'Donnell</h1>
-  <p>Provides decision makers with clear, concise, actionable feedback on proposed and ongoing solutions. Implements solutions with efficiency, transparency, and reliability. Continually acquiring knowledge and gaining understanding of new tools and techniques while implementing strategies and troubleshooting issues across integrated technologies.</p>
+  <p>Provides decision makers with clear, concise, actionable feedback on proposed and ongoing solutions. Implements
+    solutions with efficiency, transparency, and reliability. Continually acquiring knowledge and gaining understanding
+    of new tools and techniques while implementing strategies and troubleshooting issues across integrated technologies.
+  </p>
 
   <h2>Employment History</h2>
   <div class="entry">
-    <div class="business">Bayer</div>
+    <div class="business">Bayer (Monsanto)</div>
     <div class="title">Full&ndash;Stack Software Engineer</div>
     <div class="location">Remote</div>
     <div class="timeline">2022 &ndash; 2024</div>
     <div class="details">
-      <p>One of three Full Stack Developers who planned, developed, and launched crop (corn/soy/cotton) pesticide spray recording/tracking application meeting all regulatory requirements while providing clear and concise information about crop sprays times/locations and chemicals applied tailored to non&ndash;technical Bayer contracted seed growers.</p>
+      <p>One of three Full Stack Developers who planned, developed, and launched crop (corn/soy/cotton) pesticide spray
+        recording/tracking application meeting all regulatory requirements while providing clear and concise information
+        about crop sprays times/locations and chemicals applied tailored to non&ndash;technical Bayer contracted seed
+        growers.</p>
       <ul>
-        <li>Greenfield application requirements gathering, design, development, and supporting of logistics activities within the R&amp;D and Supply Chain functions of Crop Science.</li>
-        <li>Lead the enablement and integration of SAP Gigya SSO in the existing extranet environment and created a user onboarding and robust management pipeline.</li>
-        <li>Managed the collection, storage, and surfacing of chemical label information for Bayer and non&ndash;Bayer pesticides</li>
-        <li>Executed a less&ndash;is&ndash;more approach to UX enabling zero/minimum training for application users and managers.</li>
-        <li>Node/TypeScript, React/Tailwinds, Jest/React&ndash;Testing, Leaflet/Turf, GraphQL, PostgreSQL, GeoServer, AWS (ECS, CodeBuild, S3, Terraform, Lambda), GIT, Miro, Figma</li>
+        <li>Greenfield application requirements gathering, design, development, and supporting of logistics activities
+          within the R&amp;D and Supply Chain functions of Crop Science.</li>
+        <li>Lead the enablement and integration of SAP Gigya SSO in the existing extranet environment and created the
+          user onboarding pipeline with robust user management tools.</li>
+        <li>Managed the collection, storage, and surfacing of chemical label information for Bayer and non&ndash;Bayer
+          pesticides</li>
+        <li>Executed a less&ndash;is&ndash;more approach to UX enabling zero/minimum training for application users and
+          managers.</li>
+        <li>Node/TypeScript, React/Tailwinds, Jest/React&ndash;Testing, Leaflet/Turf, GraphQL, PostgreSQL, GeoServer,
+          AWS (ECS, CodeBuild, S3, Terraform, Lambda), GIT, Miro, Figma</li>
       </ul>
     </div>
   </div>
 
   <div class="entry">
-    <div class="business">Olive AI</div>
+    <div class="business">Olive AI (Startup)</div>
     <div class="title">Software Automation Engineer II</div>
     <div class="location">Remote</div>
     <div class="timeline">2020 &ndash; 2022</div>
     <div class="details">
-      <p>Developed, monitored, and maintained fit&ndash;to&ndash;purpose resilient automations between hospitals, health insurers, and government agencies across a variety of systems including Epic (EHR), insurers and hospital portals (website interaction automations using OpenCV and WebDriver), and ETL activities across client hosted systems (sFTP, email, REST apis, etc).</p>
+      <p>Developed, monitored, and maintained many concurrent fit&ndash;to&ndash;purpose resilient automations between
+        hospitals, health insurers, and government agencies across a variety of systems including Epic (EHR), insurers
+        and hospital portals (website interaction automations using OpenCV and WebDriver), and ETL activities across
+        client hosted systems (sFTP, email, REST apis, etc).</p>
       <ul>
-        <li>Implement enhancements to the in&ndash;house automation toolkit and triage existing automation workflows</li>
-        <li>Node.JS, TypeScript, Selenium WebDriver, CV in mixed virtual/non&ndash;virtual environments (AWS ECS, S3, Lamda, etc...), GIT, Jira, Confluence</li>
+        <li>Implemented enhancements to the in&ndash;house automation toolkit while monitoring and maintaining existing
+          automation workflows</li>
+        <li>Node.JS, TypeScript, Selenium WebDriver, CV in mixed virtual/non&ndash;virtual environments (AWS ECS, S3,
+          Lamda, etc...), GIT, Jira, Confluence</li>
       </ul>
     </div>
   </div>
@@ -107,13 +125,16 @@
     <div class="location">Columbus, Oh/Hybrid</div>
     <div class="timeline">2018 &ndash; 2020</div>
     <div class="details">
-      <p>Lead full-stack engineer on the Blue Core team providing and maintaining unified ontology modules for code building and allow&ndash;listing of online telemetry implementation utilized by all customer banking web enabled systems (web, ios/android, third party integrations).</p>
+      <p>Lead full-stack engineer on the Blue Core team providing and maintaining unified ontology modules for code
+        building and allow&ndash;listing of online telemetry implementation utilized by all customer banking web enabled
+        systems (web, ios/android, third party integrations).</p>
       <ul>
         <li>Build and maintain tools to support evolution of semantic models</li>
         <li>Solution and implement tool chain processes to support a wide audience of business and developer users</li>
         <li>Build and maintain tools to support delivery and integration of code artifacts</li>
         <li>Gather and disseminate repository contributors&apos; metrics and key performance indicators</li>
-        <li>Node.JS, TypeScript, React, D3/ReChart, Redux, Jenkins, (AWS CloudFormation, EC2, S3), GIT, BitBucket, Jira, Confluence</li>
+        <li>Node.JS, TypeScript, React, D3/ReChart, Redux, Jenkins, (AWS CloudFormation, EC2, S3), GIT, BitBucket, Jira,
+          Confluence</li>
       </ul>
     </div>
   </div>
@@ -124,40 +145,45 @@
     <div class="entry">
       <div class="title">HR/IT Architect Advisor</div>
       <div class="location">Houston, Tx/Hybrid</div>
-
       <div class="timeline">2013 &ndash; 2017</div>
       <div class="details">
         <ul>
-          <li>Team lead and SharePoint developer for the integration of SharePoint, MSSQL/SSIS, Taleo, and SAP creating a framework for multiple Human Resources systems allowing end&ndash;to&ndash;end automation, reporting, and records management</li>
-          <li>Developed and supported a global manager portal for the submission, approval, and processing of payroll actions including end&ndash;to&ndash;end automation for the majority of HR transactions reducing support cost by $3mm upon release and $1mm annually</li>
+          <li>Team lead and SharePoint developer for the integration of SharePoint, MSSQL/SSIS, Taleo, and SAP creating
+            a framework for multiple Human Resources systems allowing end&ndash;to&ndash;end automation, reporting, and
+            records management</li>
+          <li>Developed and supported a global manager portal for the submission, approval, and processing of payroll
+            actions including end&ndash;to&ndash;end automation for the majority of HR transactions reducing support
+            cost by $3mm upon release and $1mm annually</li>
           <li>Designed and developed the 2016 Merit Cycle management system removing the need for 3rd party system</li>
-          <li>Developed Hiring and Onboarding system for requests, approval, and tracking resulting in an annual savings of $2mm</li>
+          <li>Developed Hiring and Onboarding system for requests, approval, and tracking resulting in an annual savings
+            of $2mm</li>
           <li>Provided level 3 support for all SharePoint based HR systems</li>
           <li>SharePoint, MSSQL/SSIS/SSMS, Taleo, C#, .Net, InfoPath, Subversion</li>
         </ul>
       </div>
     </div>
-    
+
     <div class="entry">
       <div class="title">Marketing Communications Specialist</div>
       <div class="location">Houston, Tx</div>
       <div class="timeline">2008 &ndash; 2013</div>
       <div class="details">
         <ul>
-          <li>Developed and supported SharePoint based intranet, internet content support, and managed web&ndash;based tools for marketing department</li>
+          <li>Developed and supported SharePoint based intranet, internet content support, and managed web&ndash;based
+            tools for marketing department</li>
           <li>Analyzed business requirements and translated them to actionable project requirements</li>
-          <li>Lead technical contact for third party developers of the corporate public facing website ensuring clear understanding of requirements facilitating an on time launch at quarter the cost of initial estimates</li>
-          <li>SharePoint developer for intranet, eliminating legacy systems and content, with a successful on time and on budget launch</li>
+          <li>Lead technical contact for third party developers of the corporate public facing website ensuring clear
+            understanding of requirements facilitating an on time launch at quarter the cost of initial estimates</li>
+          <li>SharePoint developer for intranet, eliminating legacy systems and content, with a successful on time and
+            on budget launch</li>
           <li>Designed, implemented, and automated collaborative activities reducing overhead</li>
-          <li>HTML, CSS, JavaScript, jQuery, SharePoint, VBA, PHP, Drupal, CakePHP, WordPress, Microsoft IIS, Subversion</li>
+          <li>HTML, CSS, JavaScript, jQuery, SharePoint, VBA, PHP, Drupal, CakePHP, WordPress, Microsoft IIS, Subversion
+          </li>
         </ul>
       </div>
     </div>
 
-    </div>
-
-
-
+  </div>
 
   <h2>Education</h2>
   <div class="details">
@@ -168,14 +194,18 @@
     </ul>
   </div>
 
-  <h2>Technology</h2>
+  <h2>Technologies/Tools</h2>
   <div class="details">
-    <ul>
-      <li>
-        JavaScript, Node, React, AWS, HTML, CSS, C#, SQL, Adobe Suite, CAML, XML/XSLT/XPATH, PHP/MySQL, Web Services
-        (REST/SOAP/JSON)
-      </li>
-    </ul>
+    <dl>
+      <dt>Active</dt>
+      <dd>Node.JS, TypeScript, JavaScript, HTML, CSS, Leaflet/Turf, Tailwinds, React, Jest/React&ndash;Testing, Web
+        Services (REST/SOAP/JSON), GraphQL, PostgreSQL, GIT, AWS (ECS, CodeBuild, S3, Terraform, Lambda), Miro, Figma
+      </dd>
+      <dt>Previous</dt>
+      <dd>D3/ReChart, Redux, jQuery, CAML, XML/XSLT/XPATH, MariaDB/MySQL, Jenkins, AWS CloudFormation, BitBucket, Jira,
+        Confluence, Taleo, Selenium WebDriver, OpenCV, Microsoft IIS, C#, SharePoint, .Net, MSSQL/SSIS/SSMS, Subversion,
+        Adobe Suite, InfoPath, VBA, PHP, WordPress, Drupal, CakePHP</dd>
+    </dl>
   </div>
   <footer>&copy; Copyright 2024 Matthew O&apos;Donnell</footer>
 </body>
