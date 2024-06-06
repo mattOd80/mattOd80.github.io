@@ -7,34 +7,28 @@
     body {
       font-family: Geneva, Verdana, sans-serif;
     }
-    
+
     h1 {
-      border-bottom: 2px darkblue solid;
+      border-bottom: 2px rgb(3, 3, 60) solid;
     }
-    
+
     .entry {
       display: block;
-      margin-bottom: 2rem;
-      padding: 1rem;
-      background: linear-gradient(-3deg, rgba(0, 0, 0, 0.05), transparent 33%);
+      padding: 0 0 1rem 1rem;
     }
 
     .business,
     .title,
     .location {
       display: inline-block;
-      font-size: larger;
+      font-size: 1.45rem;
     }
 
-    .business {
-      margin-left: 1rem;
-    }
-
-    .business::after,
+    .title::before,
     .location::before {
       content: "|";
       opacity: 0.15;
-      padding: 0 1rem;
+      padding: 0 0.5rem;
     }
 
     .timeline {
@@ -42,11 +36,14 @@
       padding-right: 1rem;
     }
 
-
     .entry .entry {
-      margin: 1rem 0 0 1rem;
+      margin: 0 0 0 1rem;
       width: auto;
-      background: revert;
+      padding: 1rem 0 0 0;
+    }
+
+    .entry .entry .title::before {
+      content: none;
     }
 
     footer {
@@ -58,11 +55,7 @@
 
 <body>
   <h1>Matthew O'Donnell</h1>
-  <p>
-    Providing decision makers with clear, concise, actionable feedback on proposed and ongoing solutions. Implement
-    solutions with efficiency and transparency. Constantly acquiring knowledge of new tools and troubleshooting issues
-    across integrated technologies.
-  </p>
+  <p>Provides decision makers with clear, concise, actionable feedback on proposed and ongoing solutions. Implements solutions with efficiency, transparency, and reliability. Continually acquiring knowledge and gaining understanding of new tools and techniques while implementing strategies and troubleshooting issues across integrated technologies.</p>
 
   <h2>Employment History</h2>
   <div class="entry">
@@ -71,30 +64,27 @@
     <div class="location">Remote</div>
     <div class="timeline">2022 &ndash; 2024</div>
     <div class="details">
+      <p>One of three Full Stack Developers who planned, developed, and launched crop (corn/soy/cotton) pesticide spray recording/tracking application meeting all regulatory requirements while providing clear and concise information about crop sprays times/locations and chemicals applied tailored to non&ndash;technical Bayer contracted seed growers.</p>
       <ul>
-        <li>Supporting logistics activities within the R&amp;D and Supply Chain functions of Crop Science.</li>
-        <li>Greenfield application requirements gathering, design, development, and support</li>
-        <li>
-          Plan, develop, and launch a pesticide spray recording/login application that meets all regulatory requirements
-          providing clear and concise information about sprays tailored to Bayer contracted seed growers
-        </li>
+        <li>Greenfield application requirements gathering, design, development, and supporting of logistics activities within the R&amp;D and Supply Chain functions of Crop Science.</li>
+        <li>Lead the enablement and integration of SAP Gigya SSO in the existing extranet environment and created a user onboarding and robust management pipeline.</li>
+        <li>Managed the collection, storage, and surfacing of chemical label information for Bayer and non&ndash;Bayer pesticides</li>
+        <li>Executed a less&ndash;is&ndash;more approach to UX enabling zero/minimum training for application users and managers.</li>
+        <li>Node/TypeScript, React/Tailwinds, Jest/React&ndash;Testing, Leaflet/Turf, GraphQL, PostgreSQL, GeoServer, AWS (ECS, CodeBuild, S3, Terraform, Lambda), GIT, Miro, Figma</li>
       </ul>
     </div>
   </div>
 
   <div class="entry">
     <div class="business">Olive AI</div>
-    <div class="title">Software Automation Engineer</div>
+    <div class="title">Software Automation Engineer II</div>
     <div class="location">Remote</div>
     <div class="timeline">2020 &ndash; 2022</div>
     <div class="details">
+      <p>Developed, monitored, and maintained fit&ndash;to&ndash;purpose resilient automations between hospitals, health insurers, and government agencies across a variety of systems including Epic (EHR), insurers and hospital portals (website interaction automations using OpenCV and WebDriver), and ETL activities across client hosted systems (sFTP, email, REST apis, etc).</p>
       <ul>
-        <li>
-          Develop resilient automation workflows using tools such as Node.JS, TypeScript, Selenium in mixed
-          virtual/non&ndash;virtual environments
-        </li>
-        <li>Conceive of and implement enhancements to the in&ndash;house automation toolkit</li>
-        <li>Support and triage existing automation workflows</li>
+        <li>Implement enhancements to the in&ndash;house automation toolkit and triage existing automation workflows</li>
+        <li>Node.JS, TypeScript, Selenium WebDriver, CV in mixed virtual/non&ndash;virtual environments (AWS ECS, S3, Lamda, etc...), GIT, Jira, Confluence</li>
       </ul>
     </div>
   </div>
@@ -102,66 +92,62 @@
   <div class="entry">
     <div class="business">JPMorgan Chase &amp; Co.</div>
     <div class="title">Lead Software Developer</div>
-    <div class="location">Columbus, Ohio/Remote</div>
+    <div class="location">Columbus, Oh/Hybrid</div>
     <div class="timeline">2018 &ndash; 2020</div>
     <div class="details">
+      <p>Lead full-stack engineer on the Blue Core team providing and maintaining unified ontology modules for code building and allow&ndash;listing of online telemetry implementation utilized by all customer banking web enabled systems (web, ios/android, third party integrations).</p>
       <ul>
-        <li>
-          Develop scalable, distributed systems in various languages such as Node.JS, JavaScript/ReactJS, Java, Python,
-          Ruby, PHP, Perl in a UNIX environment with XML, GULP, YAML, JSON
-        </li>
-        <li>Solution and implement tool chain processes to support a wide audience of business and developer users</li>
-        <li>Gather and disseminate repository contributors’ metrics and key performance indicators</li>
-        <li>Build and maintain tools to support delivery and integration of code artifacts</li>
         <li>Build and maintain tools to support evolution of semantic models</li>
+        <li>Solution and implement tool chain processes to support a wide audience of business and developer users</li>
+        <li>Build and maintain tools to support delivery and integration of code artifacts</li>
+        <li>Gather and disseminate repository contributors&apos; metrics and key performance indicators</li>
+        <li>Node.JS, TypeScript, React, D3/ReChart, Redux, Jenkins, (AWS CloudFormation, EC2, S3), GIT, BitBucket, Jira, Confluence</li>
       </ul>
     </div>
   </div>
 
+
+
   <div class="entry">
-    <div class="business">Baker Hughes, a GE Company</div>
-    <div class="title">HR/IT Architect Advisor</div>
-    <div class="location">Houston, Texas</div>
-    <!-- <div class="timeline">2008 &ndash; 2017</div> -->
+    <div class="business">Baker Hughes</div>
+    <div class="timeline">2008 &ndash; 2017</div>
     <div class="entry">
       <div class="title">HR/IT Architect Advisor</div>
+      <div class="location">Houston, Tx/Hybrid</div>
+
       <div class="timeline">2013 &ndash; 2017</div>
       <div class="details">
         <ul>
-          <li>Team lead and SharePoint developer for the integration of SharePoint, MSSQL/SSIS, Taleo, and SAP
-            creating a framework for multiple Human Resources systems allowing end&ndash;to&ndash;end automation,
-            reporting, and
-            records management</li>
-          <li>Developed and supported a global manager portal for the submission, approval, and processing of payroll
-            actions including end&ndash;to&ndash;end automation for the majority of HR transactions reducing support
-            cost by $3mm
-            upon release and $1mm annually</li>
+          <li>Team lead and SharePoint developer for the integration of SharePoint, MSSQL/SSIS, Taleo, and SAP creating a framework for multiple Human Resources systems allowing end&ndash;to&ndash;end automation, reporting, and records management</li>
+          <li>Developed and supported a global manager portal for the submission, approval, and processing of payroll actions including end&ndash;to&ndash;end automation for the majority of HR transactions reducing support cost by $3mm upon release and $1mm annually</li>
           <li>Designed and developed the 2016 Merit Cycle management system removing the need for 3rd party system</li>
-          <li>Developed Hiring and Onboarding system for requests, approval, and tracking resulting in an annual savings
-            of $2mm</li>
+          <li>Developed Hiring and Onboarding system for requests, approval, and tracking resulting in an annual savings of $2mm</li>
           <li>Provided level 3 support for all SharePoint based HR systems</li>
+          <li>SharePoint, MSSQL/SSIS/SSMS, Taleo, C#, .Net, InfoPath, Subversion</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="entry">
+      <div class="title">Marketing Communications Specialist</div>
+      <div class="location">Houston, Tx</div>
+      <div class="timeline">2008 &ndash; 2013</div>
+      <div class="details">
+        <ul>
+          <li>Developed and supported SharePoint based intranet, internet content support, and managed web&ndash;based tools for marketing department</li>
+          <li>Analyzed business requirements and translated them to actionable project requirements</li>
+          <li>Lead technical contact for third party developers of the corporate public facing website ensuring clear understanding of requirements facilitating an on time launch at quarter the cost of initial estimates</li>
+          <li>SharePoint developer for intranet, eliminating legacy systems and content, with a successful on time and on budget launch</li>
+          <li>Designed, implemented, and automated collaborative activities reducing overhead</li>
+          <li>HTML, CSS, JavaScript, jQuery, SharePoint, VBA, PHP, Drupal, CakePHP, WordPress, Microsoft IIS, Subversion</li>
         </ul>
       </div>
     </div>
 
-    <div class="entry">
-      <div class="title">Marketing Communications Specialist</div>
-      <div class="timeline">2008 &ndash; 2013</div>
-      <div class="details">
-        <ul>
-          <li>Developed and supported SharePoint based intranet, internet content support, and managed web&ndash;based
-            tools for marketing department</li>
-          <li>Analyzed business requirements and translated them to actionable project requirements</li>
-          <li>Lead technical contact for third party developers of the corporate public facing website ensuring clear
-            understanding of requirements facilitating an on time launch at quarter the cost of initial estimates</li>
-          <li>SharePoint developer for intranet, eliminating legacy systems and content, with a successful on time and
-            on
-            budget launch</li>
-          <li>Designed, implemented, and automated collaborative activities reducing overhead</li>
-        </ul>
-      </div>
     </div>
-  </div>
+
+
+
 
   <h2>Education</h2>
   <div class="details">
