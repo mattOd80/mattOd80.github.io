@@ -14,11 +14,6 @@
       border-bottom: 2px rgb(3, 3, 60) solid;
     }
 
-    .entry {
-      display: block;
-      padding: 0 0 1rem 1rem;
-    }
-
     .entry p {
       margin-left: 0.5rem;
       padding-left: 1rem;
@@ -33,16 +28,17 @@
       font-size: 1.35rem;
     }
 
-    .title::before,
-    .location::before {
-      content: "|";
-      opacity: 0.15;
+    .title,
+    .location {
       padding: 0 0.5rem;
+      border-left: solid 2px rgba(111, 111, 111, 0.15);
     }
 
-    .entry .entry .title::before {
-      content: none;
+    .timeline {
+      float: right;
+      padding-right: 1rem;
     }
+
 
     .entry .entry {
       margin: 0 0 0 1rem;
@@ -50,10 +46,6 @@
       padding: 1rem 0 0 0;
     }
 
-    .timeline {
-      float: right;
-      padding-right: 1rem;
-    }
 
     .entry .entry .business,
     .entry .entry .title,
@@ -62,23 +54,35 @@
       font-size: 1.15rem;
     }
 
+    .entry .entry .title {
+      border-left: 0px;
+    }
+
     .entry .entry .timeline {
       font-style: italic;
     }
 
-    footer {
-      margin-top: 2rem;
-      text-align: center;
+    @media print {
+      body {
+        font-size: 14px;
+      }
+    }
+
+    @media screen {
+      footer {
+        margin-top: 2rem;
+        text-align: center;
+      }
     }
   </style>
 </head>
 
 <body>
-  <h1>Matthew O'Donnell</h1>
+  <h1>Matthew O&apos;Donnell</h1>
   <p>Full-stack developer focused on providing decision makers with clear, concise, actionable feedback on proposed and
-    ongoing solutions. Implements
-    solutions with efficiency, transparency, and reliability. Continually acquiring knowledge and gaining understanding
-    of new tools and techniques while implementing strategies and troubleshooting issues across integrated technologies.
+    ongoing solutions. Implements solutions with efficiency, transparency, and reliability. Continually acquiring
+    knowledge and gaining understanding of new tools and techniques while implementing strategies and troubleshooting
+    issues across integrated technologies.
   </p>
 
   <h2>Employment History</h2>
@@ -88,13 +92,14 @@
     <div class="location">Remote</div>
     <div class="timeline">2022 &ndash; 2024</div>
     <div class="details">
-      <p>One of three Full Stack Developers who planned, developed, and launched crop (corn/soy/cotton) pesticide spray
-        recording/tracking application meeting all regulatory requirements while providing clear and concise information
-        about crop sprays times/locations and chemicals applied tailored to non&ndash;technical Bayer contracted seed
-        growers.</p>
+      <p>One of three Full Stack Developers who launched the crop chemical spray recording application augmenting the
+        existing
+        field sign safety process while meeting all regulatory responsibilities. Provides clear and concise information
+        about
+        crop (corn/soy/cotton) spray times, locations, and all chemicals applied. Tailored to non&ndash;technical Bayer
+        contracted seed growers accessing via a multitude of devices in remote and low bandwidth farming locations.</p>
       <ul>
-        <li>Greenfield application requirements gathering, design, development, and supporting of logistics activities
-          within the R&amp;D and Supply Chain functions of Crop Science.</li>
+        <li>Successful 0-1/greenfield application requirements gathering, design, development, and launch.</li>
         <li>Lead the enablement and integration of SAP Gigya SSO in the existing extranet environment and created the
           user onboarding pipeline with robust user management tools.</li>
         <li>Managed the collection, storage, and surfacing of chemical label information for Bayer and non&ndash;Bayer
@@ -136,9 +141,8 @@
         building and allow&ndash;listing of online telemetry implementation utilized by all customer banking web enabled
         systems (web, ios/android, third party integrations).</p>
       <ul>
-        <li>Build and maintain tools to support evolution of semantic models</li>
-        <li>Solution and implement tool chain processes to support a wide audience of business and developer users</li>
-        <li>Build and maintain tools to support delivery and integration of code artifacts</li>
+        <li>Build and maintain tools to support evolution of semantic models and delivery/integration of code artifacts</li>
+        <li>Tool chain processes improvements supporting a wide audience of business and developer users</li>
         <li>Gather and disseminate repository contributors&apos; metrics and key performance indicators</li>
         <li>Node.JS, TypeScript, React, D3/ReChart, Redux, Jenkins, (AWS CloudFormation, EC2, S3), GIT, BitBucket, Jira,
           Confluence</li>
@@ -158,13 +162,13 @@
           <li>Team lead and SharePoint developer for the integration of SharePoint, MSSQL/SSIS, Taleo, and SAP creating
             a framework for multiple Human Resources systems allowing end&ndash;to&ndash;end automation, reporting, and
             records management</li>
-          <li>Developed and supported a global manager portal for the submission, approval, and processing of payroll
+          <li>Developed and supported a global manager portal (Manage My Team) for submission, approval, and processing
+            of payroll
             actions including end&ndash;to&ndash;end automation for the majority of HR transactions reducing support
             cost by $3mm upon release and $1mm annually</li>
-          <li>Designed and developed the 2016 Merit Cycle management system removing the need for 3rd party system</li>
           <li>Developed Hiring and Onboarding system for requests, approval, and tracking resulting in an annual savings
             of $2mm</li>
-          <li>Provided level 3 support for all SharePoint based HR systems</li>
+          <li>Designed and developed the 2016 Merit Cycle management system removing the need for 3rd party system</li>
           <li>SharePoint, MSSQL/SSIS/SSMS, Taleo, C#, .Net, InfoPath, Subversion</li>
         </ul>
       </div>
@@ -184,7 +188,7 @@
           <li>SharePoint developer for intranet, eliminating legacy systems and content, with a successful on time and
             on budget launch</li>
           <li>Designed, implemented, and automated collaborative activities reducing overhead</li>
-          <li>HTML, CSS, JavaScript, jQuery, SharePoint, VBA, PHP, Drupal, CakePHP, WordPress, Microsoft IIS, 
+          <li>HTML, CSS, JavaScript, jQuery, SharePoint, VBA, PHP, Drupal, CakePHP, WordPress, Microsoft IIS,
             Subversion</li>
         </ul>
       </div>
@@ -209,13 +213,14 @@
   </div>
 
   <div class="entry">
-    <div class="business">Baker Hughes, Inc. (HCC Division)</div>
-    <div class="title">Intranet Webmaster</div>
+    <div class="business">Hughes Christensen (Baker Hughes)</div>
+    <div class="title">Webmaster</div>
     <div class="location">Houston, TX</div>
     <div class="timeline">2005 &ndash; 2006</div>
     <div class="details">
-      <p>Successful migration and management of divisional intranet content manually from IIS/FrontPage to
-        Interwoven/BroadVision platform utilizing VB/VBA, JavaScript, HTML, XML, IIS 6, Interwoven, BroadVision, Clarity</p>
+      <p>Migration and management of divisional intranet content manually from IIS/FrontPage to
+        Interwoven/BroadVision platform utilizing VB/VBA, JavaScript, HTML, XML, IIS 6, Interwoven, BroadVision, Clarity
+      </p>
     </div>
   </div>
 
@@ -231,12 +236,14 @@
   <h2>Technologies/Tools</h2>
   <div class="details">
     <ul>
-      <li><b>Current:</b> Node.JS, TypeScript, JavaScript, HTML, CSS, Leaflet/Turf, Tailwinds, React, Jest/React&ndash;Testing, Web
-        Services (REST/SOAP/JSON), GraphQL, PostgreSQL, GIT, AWS (ECS, CodeBuild, S3, Terraform, Lambda), Miro, Figma</li>
-      <li><b>Prior:</b> D3/ReChart, Redux, jQuery, CAML, XML/XSLT/XPATH, MariaDB/MySQL, Jenkins, AWS CloudFormation, BitBucket, Jira,
-        Confluence, Taleo, Selenium WebDriver, OpenCV, Microsoft IIS, C#, SharePoint, .Net, MSSQL/SSIS/SSMS, Subversion,
-        Adobe Suite, InfoPath, VBA, PHP, WordPress, Drupal, CakePHP</li>
-      </ul>
+      <li><em>Current:</em> Node.JS, TypeScript, JavaScript, HTML, CSS, Leaflet/Turf, Tailwinds, React,
+        Jest/React&ndash;Testing, Web Services (REST/SOAP/JSON), GraphQL, PostgreSQL, GIT, AWS (ECS, CodeBuild, S3,
+        Terraform, Lambda), Miro, Figma
+      </li>
+      <li><em>Prior:</em> D3/ReChart, Redux, jQuery, CAML, XML/XSLT/XPATH, MariaDB/MySQL, Jenkins, AWS CloudFormation,
+        BitBucket, Jira, Confluence, Taleo, Selenium WebDriver, OpenCV, Microsoft IIS, C#, SharePoint, .Net,
+        MSSQL/SSIS/SSMS, Subversion, Adobe Suite, InfoPath, VBA, PHP, WordPress, Drupal, CakePHP</li>
+    </ul>
   </div>
   <footer>&copy; Copyright 2024 Matthew O&apos;Donnell</footer>
 </body>
