@@ -19,9 +19,10 @@
 
     .business,
     .title,
-    .location {
+    .location,
+    .timeline {
       display: inline-block;
-      font-size: 1.45rem;
+      font-size: 1.35rem;
     }
 
     .title::before,
@@ -45,6 +46,17 @@
     .entry .entry .title::before {
       content: none;
     }
+
+    .entry .entry .business,
+    .entry .entry .title,
+    .entry .entry .location,
+    .entry .entry .timeline {
+      font-size: 1.15rem;
+    }
+
+    .entry .entry .timeline {
+      font-style: italic;
+    } 
 
     footer {
       margin-top: 2rem;
@@ -105,8 +117,6 @@
       </ul>
     </div>
   </div>
-
-
 
   <div class="entry">
     <div class="business">Baker Hughes</div>
