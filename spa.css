@@ -1,7 +1,9 @@
 .spa_interface {
     float: right;
 }
-
+#org-root {
+    opacity: 0.2;
+}
 @media print {
     .spa_interface {
       display: none;

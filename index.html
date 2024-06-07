@@ -293,8 +293,8 @@
       if (!spa_script_loaded) {
         // Render the component to the DOM
         const container = document.getElementById('root');
+        // <ResumeBuilder />
         const App = ({ org_html }) => <React.Fragment>
-          <ResumeBuilder />
           <div id='org-root' dangerouslySetInnerHTML={{__html: org_html.replace('class="entry"', 'class="entry entry-spa"')}} />
         </React.Fragment>;
         ReactDOM.render(<App org_html={org_html} />, container);
