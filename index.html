@@ -78,7 +78,6 @@
   <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
   <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-  <script crossorigin type="text/babel" src="spa.js"></script>
 </head>
 
 <body>
@@ -128,14 +127,13 @@
       <div class="location">Remote</div>
       <div class="timeline">2020 &ndash; 2022</div>
       <div class="details">
-        <p>Developed, monitored, and maintained many concurrent fit&ndash;to&ndash;purpose resilient automations between
+        <p>Developed, monitored, and maintained a multitude of fit&ndash;to&ndash;purpose resilient automations between
           hospitals, health insurers, and government agencies across a variety of systems including Epic (EHR), insurers
           and hospital portals (website interaction automations using OpenCV and WebDriver), and ETL activities across
           client hosted systems (sFTP, email, REST apis, etc).</p>
         <ul>
           <li>Implemented enhancements to the in&ndash;house automation toolkit while monitoring and maintaining
-            existing
-            automation workflows</li>
+            existing automation workflows</li>
           <li>Node.JS, TypeScript, Selenium WebDriver, CV in mixed virtual/non&ndash;virtual environments (AWS ECS, S3,
             Lamda, etc...), GIT, Jira, Confluence</li>
         </ul>
@@ -150,16 +148,14 @@
       <div class="details">
         <p>Lead full-stack engineer on the Blue Core team providing and maintaining unified ontology modules for code
           building and allow&ndash;listing of online telemetry implementation utilized by all customer banking web
-          enabled
-          systems (web, ios/android, third party integrations).</p>
+          enabled systems (web, ios/android, third party integrations).</p>
         <ul>
           <li>Build and maintain tools to support evolution of semantic models and delivery/integration of code
             artifacts</li>
           <li>Tool chain processes improvements supporting a wide audience of business and developer users</li>
           <li>Gather and disseminate repository contributors&apos; metrics and key performance indicators</li>
           <li>Node.JS, TypeScript, React, D3/ReChart, Redux, Jenkins, (AWS CloudFormation, EC2, S3), GIT, BitBucket,
-            Jira,
-            Confluence</li>
+            Jira, Confluence</li>
         </ul>
       </div>
     </div>
@@ -174,18 +170,13 @@
         <div class="details">
           <ul>
             <li>Team lead and SharePoint developer for the integration of SharePoint, MSSQL/SSIS, Taleo, and SAP
-              creating
-              a framework for multiple Human Resources systems allowing end&ndash;to&ndash;end automation, reporting,
-              and
-              records management</li>
+              creating a framework for multiple Human Resources systems allowing end&ndash;to&ndash;end automation,
+              reporting, and records management</li>
             <li>Developed and supported a global manager portal (Manage My Team) for submission, approval, and
-              processing
-              of payroll
-              actions including end&ndash;to&ndash;end automation for the majority of HR transactions reducing support
-              cost by $3mm upon release and $1mm annually</li>
+              processing of payroll actions including end&ndash;to&ndash;end automation for the majority of HR
+              transactions reducing support cost by $3mm upon release and $1mm annually</li>
             <li>Developed Hiring and Onboarding system for requests, approval, and tracking resulting in an annual
-              savings
-              of $2mm</li>
+              savings of $2mm</li>
             <li>Designed and developed the 2016 Merit Cycle management system removing the need for 3rd party system
             </li>
             <li>SharePoint, MSSQL/SSIS/SSMS, Taleo, C#, .Net, InfoPath, Subversion</li>
@@ -268,40 +259,43 @@
     <footer>&copy; Copyright 2024 Matthew O&apos;Donnell</footer>
   </div>
   <script type="text/babel">
-    // setup
-    const base = location.href.replace(/index\.html.*/, '');
 
-    // spa.css load
-    const sheet_import = `@import url("${base}/spa.css");`;
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'data:text/css,' + escape(sheet_import);
-    document.getElementsByTagName('head')[0].appendChild(link);
+    if(!location.protocol.startsWith('file')){
+      const spa = createElement('script');
+      spa.setAttribute('crossorigin', '');
+      spa.setAttribute('type', 'text/babel');
+      spa.setAttribute('src', 'spa.js');
+      document.getElementsByTagName('head')[0].appendChild(spa);
 
-    // spa button add
-    let spa_script_loaded = false;
-    let org_html = document.getElementById('root').innerHTML;
+      // setup
+      const base = location.href.replace(/index\.html.*/, '');
 
-    const spa_button = document.createElement('button');
-    spa_button.innerText = 'SPA interface';
-    spa_button.classList.add('spa_interface');
-    let h1s = document.getElementsByTagName('h1');
-    h1s[0].appendChild(spa_button);
+      // spa.css load
+      const sheet_import = `@import url("${base}/spa.css");`;
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'data:text/css,' + escape(sheet_import);
+      document.getElementsByTagName('head')[0].appendChild(link);
 
-    // load spa script
-    spa_button.addEventListener('click', () => {
-      if (!spa_script_loaded) {
-        // Render the component to the DOM
-        const container = document.getElementById('root');
-        // <ResumeBuilder />
-        const App = ({ org_html }) => <React.Fragment>
-          <div id='org-root' dangerouslySetInnerHTML={{__html: org_html.replace('class="entry"', 'class="entry entry-spa"')}} />
-        </React.Fragment>;
-        ReactDOM.render(<App org_html={org_html} />, container);
-        spa_script_loaded = true;
-        spa_button.remove();
-      }
-    });
+      // spa button add
+      let spa_script_loaded = false;
+      let org_html = document.getElementById('root').innerHTML;
+
+      const spa_button = document.createElement('button');
+      spa_button.innerText = 'SPA interface';
+      spa_button.classList.add('spa_interface');
+      let h1s = document.getElementsByTagName('h1');
+      h1s[0].appendChild(spa_button);
+
+      // load spa script
+      spa_button.addEventListener('click', () => {
+        if (!spa_script_loaded) {
+          ReactDOM.render(<App org_html={org_html} />, document.getElementById('root'));
+          spa_script_loaded = true;
+          spa_button.remove();
+        }
+      });
+    }
   </script>
 </body>
 
