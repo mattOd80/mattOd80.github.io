@@ -1,0 +1,9 @@
+.spa_interface {
+    float: right;
+}
+
+@media print {
+    .spa_interface {
+      display: none;
+    }
+}
