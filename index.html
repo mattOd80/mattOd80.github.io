@@ -17,7 +17,7 @@
     .email {
       float: right;
       font-size: small;
-      line-height: 4rem;
+      line-height: 3.5rem;
     }
 
     .entry {
@@ -35,7 +35,7 @@
     .entry .location,
     .entry .timeline {
       display: inline !important;
-      font-size: 1.35rem;
+      font-size: 1.15rem;
     }
 
     .title,
@@ -74,11 +74,19 @@
 
     footer {
       text-align: center;
+      margin: 2rem 0;
+      color: rgba(111, 111, 111, 1)
     }
 
     @media print {
       body {
         font-size: 14px;
+      }
+      h1, h2 {
+        margin: 2rem 0;
+      }
+      .entry {
+        break-inside: avoid;
       }
     }
   </style>
@@ -140,7 +148,7 @@
     </div>
 
     <div class="entry">
-      <div class="business">JPMorgan Chase &amp; Co.</div>
+      <div class="business">JPMorgan Chase</div>
       <div class="title">Lead Software Developer</div>
       <div class="location">Columbus, OH &ndash; Hybrid</div>
       <div class="timeline">2018 &ndash; 2020</div>
@@ -161,8 +169,6 @@
 
     <div class="entry">
       <div class="business">Baker Hughes (Corporate)</div>
-      <div class="timeline">2008 &ndash; 2017</div>
-      <div class="entry">
         <div class="title">HR/IT Architect Advisor</div>
         <div class="location">Houston, TX &ndash; Hybrid</div>
         <div class="timeline">2013 &ndash; 2017</div>
@@ -184,7 +190,8 @@
       </div>
 
       <div class="entry">
-        <div class="title">Marketing Communications Specialist</div>
+        <div class="business">Baker Hughes (Corporate)</div>
+        <div class="title">Marketing Specialist</div>
         <div class="location">Houston, TX</div>
         <div class="timeline">2008 &ndash; 2013</div>
         <div class="details">
@@ -202,9 +209,6 @@
           </ul>
         </div>
       </div>
-
-    </div>
-
     <div class="entry">
       <div class="business">eMunications Inc.</div>
       <div class="title">Systems Programming Manager</div>
@@ -222,7 +226,7 @@
     </div>
 
     <div class="entry">
-      <div class="business">Hughes Christensen (Baker Hughes)</div>
+      <div class="business">Baker Hughes (HCC)</div>
       <div class="title">Webmaster</div>
       <div class="location">Houston, TX</div>
       <div class="timeline">2005 &ndash; 2006</div>
