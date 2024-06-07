@@ -261,7 +261,7 @@
   <script type="text/babel">
 
     if(!location.protocol.startsWith('file')){
-      const spa = createElement('script');
+      const spa = document.createElement('script');
       spa.setAttribute('crossorigin', '');
       spa.setAttribute('type', 'text/babel');
       spa.setAttribute('src', 'spa.js');
