@@ -82,6 +82,10 @@
       }
     }
   </style>
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script crossorigin type='text/babel' src='spa.js'></script>
 </head>
 
 <body>
@@ -260,6 +264,39 @@
     Contact email: MattODonnellUS<span>@</span>gmail.com<br />
     References available upon request
   </footer>
+  <script type="text/babel">
+
+    if (!location.protocol.startsWith('file')) {
+      // setup
+      const base = location.href.replace(/index\.html.*/, '');
+
+      // spa.css load
+      const sheet_import = `@import url("${base}/spa.css");`;
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'data:text/css,' + escape(sheet_import);
+      document.getElementsByTagName('head')[0].appendChild(link);
+
+      // spa button add
+      let spa_script_loaded = false;
+      let org_html = document.getElementById('root').innerHTML;
+
+      const spa_button = document.createElement('button');
+      spa_button.innerText = 'SPA interface';
+      spa_button.classList.add('spa_interface');
+      let h1s = document.getElementsByTagName('h1');
+      h1s[0].appendChild(spa_button);
+
+      // load spa script
+      spa_button.addEventListener('click', () => {
+        if (!spa_script_loaded) {
+          ReactDOM.render(<App org_html={org_html} />, document.getElementById('root'));
+          spa_script_loaded = true;
+          spa_button.remove();
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>
