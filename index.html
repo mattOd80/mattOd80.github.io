@@ -75,11 +75,14 @@
       }
     }
   </style>
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script crossorigin type="text/babel" src="spa.js"></script>
 </head>
 
 <body>
   <div id="root">
-
     <h1>Matthew O&apos;Donnell</h1>
     <p>Full-stack developer focused on providing decision makers with clear, concise, actionable feedback on proposed
       and
@@ -264,7 +267,7 @@
     </div>
     <footer>&copy; Copyright 2024 Matthew O&apos;Donnell</footer>
   </div>
-  <script>
+  <script type="text/babel">
     // setup
     const base = location.href.replace(/index\.html.*/, '');
 
@@ -277,6 +280,8 @@
 
     // spa button add
     let spa_script_loaded = false;
+    let org_html = document.getElementById('root').innerHTML;
+
     const spa_button = document.createElement('button');
     spa_button.innerText = 'SPA interface';
     spa_button.classList.add('spa_interface');
@@ -286,10 +291,13 @@
     // load spa script
     spa_button.addEventListener('click', () => {
       if (!spa_script_loaded) {
-
-        const script = document.createElement('script');
-        script.setAttribute('src', `${base}/spa_loader.js`);
-        document.head.appendChild(script);
+        // Render the component to the DOM
+        const container = document.getElementById('root');
+        const App = ({ org_html }) => <React.Fragment>
+          <ResumeBuilder />
+          <div id='org-root' dangerouslySetInnerHTML={{__html: org_html.replace('class="entry"', 'class="entry entry-spa"')}} />
+        </React.Fragment>;
+        ReactDOM.render(<App org_html={org_html} />, container);
         spa_script_loaded = true;
         spa_button.remove();
       }
