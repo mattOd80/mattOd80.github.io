@@ -1,278 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <title>Matthew O'Donnell</title>
-  <style>
-    body {
-      font-family: Geneva, Verdana, sans-serif;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    h1 {
-      border-bottom: 2px rgb(3, 3, 60) solid;
-    }
-
-    .email {
-      float: right;
-      font-size: small;
-      text-align: right;
-      /* line-height: 3.5rem; */
-    }
-
-    .entry {
-      margin-bottom: 2rem;
-    }
-
-    .entry p {
-      margin-left: 0.5rem;
-      padding-left: 1rem;
-      border-left: solid 2px rgba(111, 111, 111, 0.15);
-    }
-
-    .entry .business,
-    .entry .title,
-    .entry .location,
-    .entry .timeline {
-      display: inline !important;
-      font-size: 1.15rem;
-    }
-
-    .title,
-    .location {
-      padding: 0 0.5rem;
-      border-left: solid 2px rgba(111, 111, 111, 0.15);
-    }
-
-    .timeline {
-      float: right;
-      padding-right: 1rem;
-    }
-
-
-    .entry .entry {
-      margin: 0 0 0 1rem;
-      width: auto;
-      padding: 1rem 0 0 0;
-    }
-
-
-    .entry .entry .business,
-    .entry .entry .title,
-    .entry .entry .location,
-    .entry .entry .timeline {
-      font-size: 1.15rem;
-    }
-
-    .entry .entry .title {
-      border-left: 0px;
-    }
-
-    .entry .entry .timeline {
-      font-style: italic;
-    }
-
-    footer {
-      text-align: center;
-      margin: 2rem 0;
-      color: rgba(111, 111, 111, 1)
-    }
-
-    @media print {
+  <head>
+    <title>Matthew O'Donnell</title>
+    <style>
       body {
-        font-size: 14px;
+        font-family: Geneva, Verdana, sans-serif;
+        max-width: 900px;
+        margin: 0 auto;
       }
 
-      h1,
-      h2 {
-        margin: 2rem 0;
+      h1 {
+        border-bottom: 2px rgb(3, 3, 60) solid;
+      }
+
+      .email {
+        float: right;
+        font-size: small;
+        text-align: right;
+        /* line-height: 3.5rem; */
       }
 
       .entry {
-        break-inside: avoid;
+        margin-bottom: 2rem;
       }
-    }
-  </style>
-</head>
 
-<body>
-  <div id="root">
-    <h1>Matthew O&apos;Donnell <div class="email">MattODonnellUS<span>@</span>gmail.com</div>
-    </h1>
-    <p>Full-stack developer focused on providing decision makers with clear, concise, actionable feedback on proposed
-      and ongoing solutions. Implements solutions with efficiency, transparency and reliability. Continually acquiring
-      knowledge and gaining understanding of new tools and techniques while implementing strategies and troubleshooting
-      issues across integrated technologies.
-    </p>
+      .entry p {
+        margin-left: 0.5rem;
+        padding-left: 1rem;
+        border-left: solid 2px rgba(111, 111, 111, 0.15);
+      }
 
-    <h2>Employment History</h2>
-    <div class="entry">
-      <div class="business">Bayer (Monsanto)</div>
-      <div class="title">Full&ndash;Stack Software Engineer</div>
-      <div class="location">Remote</div>
-      <div class="timeline">2022 &ndash; 2024</div>
+      .entry .business,
+      .entry .title,
+      .entry .location,
+      .entry .timeline {
+        display: inline !important;
+        font-size: 0.9rem;
+        padding-top: 0.1rem;
+      }
+
+      .entry .timeline {
+        font-style: italic;
+        line-height: 0.9rem;
+        font-size: 0.7rem;
+      }
+
+      .title,
+      .location {
+        padding: 0 0.5rem;
+        border-left: solid 2px rgba(111, 111, 111, 0.15);
+      }
+
+      .timeline {
+        float: right;
+        padding-right: 1rem;
+      }
+
+      .entry .entry {
+        margin: 0 0 0 1rem;
+        width: auto;
+        padding: 1rem 0 0 0;
+      }
+
+      .entry .entry .business,
+      .entry .entry .title,
+      .entry .entry .location,
+      .entry .entry .timeline {
+        font-size: 1.15rem;
+      }
+
+      .entry .entry .title {
+        border-left: 0px;
+      }
+
+      .entry .entry .timeline {
+        font-style: italic;
+      }
+
+      footer {
+        text-align: center;
+        margin: 2rem 0;
+        color: rgba(111, 111, 111, 1);
+      }
+
+      @media print {
+        body {
+          font-size: 14px;
+        }
+
+        h1,
+        h2 {
+          margin: 2rem 0;
+        }
+
+        .entry {
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root">
+      <h1>
+        Matthew O&apos;Donnell
+        <div class="email">MattODonnellUS<span>@</span>gmail.com</div>
+      </h1>
+
+      <h2>Technologies/Tools</h2>
       <div class="details">
-        <p>One of three Full Stack Developers who launched the crop chemical spray recording application augmenting the
-          existing field sign safety process while meeting all regulatory responsibilities. Provided clear and concise
-          information about crop (corn/soy/cotton) spray times, locations and all chemicals applied. Tailored to
-          non&ndash;technical Bayer contracted seed growers accessing via a multitude of devices in remote and low
-          bandwidth farming locations.
-        </p>
         <ul>
-          <li>Successful 0-1/greenfield application requirements gathering, design, development and launch.</li>
-          <li>Led the enablement and integration of SAP Gigya SSO in the existing extranet environment and created the
-            user onboarding pipeline with robust user management tools.</li>
-          <li>Developed and launched internal API for the management, collection, storage, and surfacing of chemical
-            label information for Bayer and non&ndash;Bayer
-            pesticides.</li>
-          <li>Developed and launched external facing API for the collection, storage, and surfacing of crop chemical
-            spray recordings, user management, and regulatory reporting.</li>
-          <li>Executed a less&ndash;is&ndash;more approach to UX enabling zero/minimum training for application users
-            and managers.</li>
-          <li>Primary Technologies used: Node/TypeScript, React/Tailwind, Jest/React&ndash;Testing, Leaflet/Turf,
-            GraphQL, PostgreSQL, GeoServer, AWS (ECS, CodeBuild, S3, Terraform, Lambda), GIT, Miro, Figma</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="business">Olive AI (Startup)</div>
-      <div class="title">Software Automation Engineer</div>
-      <div class="location">Remote</div>
-      <div class="timeline">2020 &ndash; 2022</div>
-      <div class="details">
-        <p>Developed, monitored, and maintained a multitude of fit&ndash;to&ndash;purpose resilient automations between
-          hospitals, health insurers, and government agencies across a variety of systems including Epic (EHR), insurers
-          and hospital portals (website interaction automations using OpenCV and WebDriver), and ETL activities across
-          client hosted systems (sFTP, email, REST apis, etc).</p>
-        <ul>
-          <li>Implemented enhancements to the in&ndash;house automation toolkit while monitoring and maintaining
-            existing automation workflows</li>
-          <li>Primary Technologies used: Node.JS, TypeScript, Selenium WebDriver, CV in mixed virtual/non&ndash;virtual
-            environments (AWS ECS, S3, Lamda, etc...), GIT, Jira, Confluence</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="business">JPMorgan Chase</div>
-      <div class="title">Lead Software Developer</div>
-      <div class="location">Columbus, OH &ndash; Hybrid</div>
-      <div class="timeline">2018 &ndash; 2020</div>
-      <div class="details">
-        <p>Lead full-stack engineer on the Blue Core team providing and maintaining unified ontology modules for code
-          building and allow&ndash;listing of online telemetry implementation utilized by all customer banking web
-          enabled systems (web, ios/android, third party integrations).</p>
-        <ul>
-          <li>Built and maintained tools to support evolution of semantic models and delivery/integration of code
-            artifacts</li>
-          <li>Implemented tool chain processes improvements supporting a wide audience of business and developer users</li>
-          <li>Gathered and disseminated repository contributors&apos; metrics and key performance indicators</li>
-          <li>Primary Technologies used: Node.JS, TypeScript, React/Redux, D3/ReChart, Swagger (OpenAPI), Sequelize,
-            SQL, MariaDB/MySQL, Jenkins, (AWS
-            CloudFormation, EC2, S3), GIT, BitBucket, Jira, Confluence</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="business">Baker Hughes (Corporate)</div>
-      <div class="title">HR/IT Architect Advisor</div>
-      <div class="location">Houston, TX &ndash; Hybrid</div>
-      <div class="timeline">2013 &ndash; 2017</div>
-      <div class="details">
-        <p>Team lead and SharePoint developer for the integration of SharePoint, MSSQL/SSIS, Taleo, and SAP
-          creating a framework for multiple Human Resources systems allowing end&ndash;to&ndash;end automation,
-          reporting, and records management</p>
-        <ul>
-          <li>Developed and supported a global manager portal (Manage My Team) for submission, approval, and
-            processing of payroll actions including end&ndash;to&ndash;end automation for the majority of HR
-            transactions reducing support cost by $3mm upon release and $1mm annually</li>
-          <li>Developed Hiring and Onboarding system for requests, approval, and tracking resulting in an annual
-            savings of $2mm</li>
-          <li>Designed and developed the 2016 Merit Cycle management system removing the need for 3rd party system
+          <li>
+            <em>Current:</em> Node.JS, TypeScript, JavaScript, HTML, CSS,
+            Leaflet/Turf, Tailwinds, React, Jest/React&ndash;Testing, Web
+            Services (REST/SOAP/JSON), GraphQL, PostgreSQL, GIT, AWS (ECS,
+            CodeBuild, S3, Lambda), Miro, Figma
           </li>
-          <li>Primary Technologies used: SharePoint, MSSQL/SSIS/SSMS, Taleo, C#, .Net, InfoPath, Subversion</li>
+          <li>
+            <em>Prior:</em> D3/ReChart, Redux, jQuery, CAML, XML/XSLT/XPATH,
+            Sequelize, MariaDB/MySQL, Jenkins, AWS CloudFormation, BitBucket,
+            Jira, Confluence, Taleo, Selenium WebDriver, OpenCV, Microsoft IIS,
+            C#, SharePoint, .Net, MSSQL/SSIS/SSMS, Entity Framework (EF),
+            Subversion, Adobe Suite, InfoPath, VBA, PHP, WordPress, Drupal,
+            CakePHP
+          </li>
         </ul>
       </div>
-    </div>
 
-    <div class="entry">
-      <div class="business">Baker Hughes (Corporate)</div>
-      <div class="title">Marketing Specialist</div>
-      <div class="location">Houston, TX</div>
-      <div class="timeline">2008 &ndash; 2013</div>
+      <h2>Employment History</h2>
+      <div class="entry">
+        <div class="business">Bayer (Monsanto)</div>
+        <div class="title">Full&ndash;Stack Software Engineer</div>
+        <div class="location">Remote</div>
+        <div class="timeline">Sep 2022 - Dec 2023 · 1 yr 4 mos</div>
+        <div class="details">
+          <ul>
+            <li>
+              Successful 0-1/greenfield application requirements gathering,
+              design, development and launch using agile methodologies
+            </li>
+            <li>
+              Implemented concise UI (React/MUI) enabling zero/minimum training
+              for a diverse set of application users and system managers.
+            </li>
+            <li>
+              Integrated SAP Gigya SSO OAuth & OpenID environment and created
+              the user pipeline management tools
+            </li>
+            <li>
+              Developed and launched internal REST API for the management,
+              collection, storage, and surfacing Bayer and non–Bayer pesticide
+              label information.
+            </li>
+            <li>
+              Created GraphQL API wrapper for the secure and efficient
+              collection, storage, and surfacing of crop chemical spray records
+              within GeoServer
+            </li>
+            <li>
+              Front end: Node, React, Tailwind, Leaflet/Turf, MUI, Jest,
+              React-testing
+            </li>
+            <li>
+              Back end: TypeScript, Node, Express, GraphQL, Jest, PostgreSQL,
+              Flyway, GeoServer
+            </li>
+            <li>
+              Other Technologies used: AWS (ECS, CodeBuild, S3, Terraform,
+              Lambda), GIT, Miro, Figma, DataDog
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="business">Olive AI (Startup)</div>
+        <div class="title">Software Automation Engineer</div>
+        <div class="location">Remote</div>
+        <div class="timeline">Aug 2020 - Jul 2022 · 2 yrs</div>
+        <div class="details">
+          <ul>
+            <li>
+              Collaborated with clients to collect requirements and scope a
+              multitude of fit–to–purpose resilient automations between
+              hospitals, health insurers, and government agencies across a
+              variety of networks, systems and technical landscapes
+            </li>
+            <li>
+              Automated activities within EHRs (Microsoft UI Automation/OpenCV),
+              insurers and hospital web portals (OpenCV and WebDriver), and ETL
+              across client hosted systems (sFTP, email, RESTful apis, *SQL,
+              etc)
+            </li>
+            <li>
+              Orchestrated the execution, maintenance, and monitoring of
+              automation workflows using AWS EC2s, S3.
+            </li>
+            <li>
+              Implemented typescript and added a set of modules for enhancing
+              the automation developer experience and resilience
+            </li>
+            <li>
+              Primary Technologies used: Node.JS, TypeScript, Selenium
+              WebDriver, OpenCV, PowerShell, mixed virtual/non–virtual
+              environments (AWS ECS, S3, Lamda, etc...), GIT, Jira, Confluence
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="business">JPMorgan Chase</div>
+        <div class="title">Lead Software Developer</div>
+        <div class="location">Columbus, OH &ndash; Hybrid</div>
+        <div class="timeline">Jul 2018 - Aug 2020 · 2 yrs 2 mos</div>
+        <div class="details">
+          <ul>
+            <li>
+              Maintained unified ontology/semantic models in Apache Jena for
+              code generation and allow–listing of online telemetry capture
+            </li>
+            <li>
+              Created and maintained the tool chain and build pipeline for the
+              approval, delivery and integration of semantic models across
+              multiple codebases using TypeScript, Gulp, Yaml, Mocha and Chi
+              ensuring adherence to the semantic model process
+            </li>
+            <li>
+              Led cost reduction efforts to mitigate the large amount of
+              telemetry data sent to AEM from all web enabled portals (web,
+              Mobile and 3rd-party integrators)
+            </li>
+            <li>
+              Launched telemetry stream management application in
+              Typescript/React/Redux/Sequelize and a Restful api using Swagger
+              (OpenAPI) allowing end-to-end testable preprocessing of telemetry
+              data through Kafka via Nifi
+            </li>
+            <li>
+              Primary Technologies used: Node.JS, TypeScript, React/Redux,
+              D3/ReChart, Swagger (OpenAPI), Sequelize, SQL, MariaDB/MySQL,
+              Jenkins, (AWS CloudFormation, EC2, S3), GIT, BitBucket, Jira,
+              Confluence, Splunk
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="entry"
+        style="border-bottom: solid 2px rgba(111, 111, 111, 0.15)"
+      >
+        <div class="business">Baker Hughes</div>
+        <div class="timeline">9 yrs 9 mos</div>
+      </div>
+
+      <div class="entry" style="padding-left: 0.6rem">
+        <div class="business">Baker Hughes (Corporate)</div>
+        <div class="title">HR/IT Architect Advisor</div>
+        <div class="location">Houston, TX &ndash; Hybrid</div>
+        <div class="timeline">Oct 2013 - Oct 2017 · 4 yrs 1 m</div>
+        <div class="details">
+          <ul>
+            <li>
+              Developed and supported a global manager portal (Manage My Team)
+              atop SAP, SharePoint, MSSQL/SSIS/SSMS/SSRS and InfoPath for the
+              submission, approval, and processing of payroll actions including
+              end–to–end automation for the majority of HR transactions reducing
+              support cost by $3mm upon release and $1mm annually
+            </li>
+            <li>
+              Developed Hiring and Onboarding system integrated with Oracle
+              Taleo using SharePoint and MSSQL/SSIS/SSMS for requests, approval,
+              and tracking resulting in an annual savings of $2mm
+            </li>
+            <li>
+              Designed and developed the 2016 Merit Cycle management system atop
+              global manager portal (SAP, SharePoint, MSSQL/SSIS/SSMS/SSRS, and
+              InfoPath) removing the need for 3rd party system
+            </li>
+            <li>
+              Member of the Change Control Board (CCB) and steering committee
+              for HRIS
+            </li>
+            <li>
+              Primary Technologies used: SharePoint, MSSQL/SSIS/SSMS/SSRS,
+              Taleo, C#, .Net, InfoPath, Subversion
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry" style="padding-left: 0.6rem">
+        <div class="business">Baker Hughes (Corporate)</div>
+        <div class="title">Marketing Specialist</div>
+        <div class="location">Houston, TX</div>
+        <div class="timeline">Feb 2008 - Oct 2013 · 5 yrs 9 mos</div>
+        <div class="details">
+          <p>
+            Developed and supported SharePoint based intranet, internet content
+            support, and managed web&ndash;based tools for marketing department
+          </p>
+          <ul>
+            <li>
+              Analyzed business requirements and translated them to actionable
+              project requirements
+            </li>
+            <li>
+              Lead technical contact for third party developers of the corporate
+              public facing website ensuring clear understanding of requirements
+              facilitating an on time launch at quarter the cost of initial
+              estimates
+            </li>
+            <li>
+              SharePoint developer for intranet, eliminating legacy systems and
+              content, with a successful on time and on budget launch
+            </li>
+            <li>
+              Designed, implemented, and automated collaborative activities
+              reducing overhead
+            </li>
+            <li>
+              Primary Technologies used: HTML, CSS, JavaScript, jQuery,
+              SharePoint, VBA, PHP, Drupal, CakePHP, WordPress, Microsoft IIS,
+              Subversion
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="business">eMunications Inc.</div>
+        <div class="title">Systems Programming Manager</div>
+        <div class="location">Houston, TX</div>
+        <div class="timeline">Jan 2007 - Feb 2008 · 1 yr 2 mos</div>
+        <div class="details">
+          <p>
+            Building and maintaining web presents for chamber of commerce
+            businesses using Flash/ActionScript Drupal and WordPress site
+            customizations, hosting, server administration, and email
+            administration
+          </p>
+          <ul>
+            <li>
+              Systems administrator for email servers, DNS, and col-location
+              hosting
+            </li>
+            <li>
+              Full-stack LAMP (Linux via XServer w/homebrew, Apache, MySQL, PHP)
+            </li>
+            <li>Web design (Javascript, HTML, CSS, Flash/ActionScript)</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Education</h2>
       <div class="details">
-        <p>Developed and supported SharePoint based intranet, internet content support, and managed web&ndash;based
-          tools for marketing department</p>
         <ul>
-          <li>Analyzed business requirements and translated them to actionable project requirements</li>
-          <li>Lead technical contact for third party developers of the corporate public facing website ensuring clear
-            understanding of requirements facilitating an on time launch at quarter the cost of initial estimates</li>
-          <li>SharePoint developer for intranet, eliminating legacy systems and content, with a successful on time and
-            on budget launch</li>
-          <li>Designed, implemented, and automated collaborative activities reducing overhead</li>
-          <li>Primary Technologies used: HTML, CSS, JavaScript, jQuery, SharePoint, VBA, PHP, Drupal, CakePHP,
-            WordPress, Microsoft IIS,
-            Subversion</li>
+          <li>
+            2008 &ndash; 2010: Cy&ndash;Fair (LoneStar) College, Houston, TX
+            &mdash; Computer Sciences (24ch complete)
+          </li>
+          <li>
+            2004 &ndash; 2006: Art Institute of Houston, Houston, TX &mdash;
+            Multimedia and Web Design (18ch complete)
+          </li>
+          <li>
+            2000 &ndash; 2001: United States Navy, Pensacola, FL &mdash;
+            Aviation Electrician A&ndash;School
+          </li>
         </ul>
       </div>
     </div>
-    <div class="entry">
-      <div class="business">eMunications Inc.</div>
-      <div class="title">Systems Programming Manager</div>
-      <div class="location">Houston, TX</div>
-      <div class="timeline">2007 &ndash; 2008</div>
-      <div class="details">
-        <p>Building and maintaining web presents for chamber of commerce businesses using Flash/ActionScript Drupal and
-          WordPress site customizations, hosting, server administration, and email administration</p>
-        <ul>
-          <li>Systems administrator for email servers, DNS, and col-location hosting</li>
-          <li>Full-stack LAMP (Linux via XServer w/homebrew, Apache, MySQL, PHP)
-          <li>Web design (Javascript, HTML, CSS, Flash/ActionScript)</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="business">Baker Hughes (HCC)</div>
-      <div class="title">Webmaster</div>
-      <div class="location">Houston, TX</div>
-      <div class="timeline">2005 &ndash; 2006</div>
-      <div class="details">
-        <p>Migration and management of divisional intranet content manually from IIS/FrontPage to
-          Interwoven/BroadVision platform utilizing VB/VBA, JavaScript, HTML, XML, IIS 6, Interwoven, BroadVision,
-          Clarity
-        </p>
-      </div>
-    </div>
-
-    <h2>Education</h2>
-    <div class="details">
-      <ul>
-        <li>2008 &ndash; 2010: Cy&ndash;Fair (LoneStar) College, Houston, TX &ndash; Computer Sciences</li>
-        <li>2004 &ndash; 2006: Art Institute of Houston, Houston, TX &ndash; Multimedia and Web Design</li>
-        <li>2000 &ndash; 2001: United States Navy, Pensacola, FL &ndash; Aviation Electrician A&ndash;School</li>
-      </ul>
-    </div>
-
-    <h2>Technologies/Tools</h2>
-    <div class="details">
-      <ul>
-        <li><em>Current:</em> Node.JS, TypeScript, JavaScript, HTML, CSS, Leaflet/Turf, Tailwinds, React,
-          Jest/React&ndash;Testing, Web Services (REST/SOAP/JSON), GraphQL, PostgreSQL, GIT, AWS (ECS, CodeBuild, S3,
-          Terraform, Lambda), Miro, Figma
-        </li>
-        <li><em>Prior:</em> D3/ReChart, Redux, jQuery, CAML, XML/XSLT/XPATH, Sequelize, MariaDB/MySQL, Jenkins, AWS
-          CloudFormation,
-          BitBucket, Jira, Confluence, Taleo, Selenium WebDriver, OpenCV, Microsoft IIS, C#, SharePoint, .Net,
-          MSSQL/SSIS/SSMS, Entity Framework (EF), Subversion, Adobe Suite, InfoPath, VBA, PHP, WordPress, Drupal,
-          CakePHP</li>
-      </ul>
-    </div>
-  </div>
-  <footer>References available upon request </footer>
-</body>
-
+    <footer>References available upon request</footer>
+  </body>
 </html>
